@@ -5,12 +5,12 @@
        "Operator":"IsEquals",
        "DataType":"String",
        "Operand":"UPDATED",
-       "MoreInfoUrl":"https://PlaceHolderforKB.com",
+       "MoreInfoUrl":"",
        "RemediationStrings":[ 
           { 
              "Language":"en_US",
              "Title":"Windows devices need to have updated BIOS firmware.",
-             "Description": "Windows devices need to have updated BIOS firmware."
+             "Description": "Windows devices need to have updated BIOS firmware to fix security and other issues. Please make sure you are restarting your device after Windows Updates occur."
           }
        ]
     }
