@@ -18,3 +18,17 @@ You would have to rework it a little to support Lenovo models since they use a d
 </p>
 
 
+## Windows Hello for Business Enrollment Compliance
+<p>
+<a href="https://github.com/neckermann/ModernDeviceManagement/blob/main/Custom%20Compliance/Get-WindowsHelloStatus.ps1" target="_blank" rel="noopener noreferrer">Get-WindowsHelloStatus.ps1</a>
+<br>
+<a href="https://github.com/neckermann/ModernDeviceManagement/blob/main/Custom%20Compliance/Get-WindowsHelloStatus.json" target="_blank" rel="noopener noreferrer">Get-WindowsHelloStatus.json</a>
+<br>
+</p>
+<p>
+These 2 files make up the custom compliance script and json to allow you to mark devices non compliant in Intune that are not enrolled in Windows Hello for Business. I have added some local logging for troubleshooting.
+</p>
+<p>Modified version of Martin Bengtsson: https://www.imab.dk/use-custom-compliance-settings-in-microsoft-intune-to-require-windows-hello-enrollment
+</p>
+
+

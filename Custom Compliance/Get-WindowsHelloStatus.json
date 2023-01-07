@@ -1,0 +1,18 @@
+{
+"Rules":[ 
+    { 
+       "SettingName":"EnrollmentStatus",
+       "Operator":"IsEquals",
+       "DataType":"String",
+       "Operand":"ENROLLED",
+       "MoreInfoUrl":"ms-settings:signinoptions",
+       "RemediationStrings":[ 
+          { 
+             "Language":"en_US",
+             "Title":"You must be Enrolled in Windows Hello for Business",
+             "Description": "Please enroll in Windows Hello for Business. You can do this by searching for 'Sign-in options' in the start menu and enroll."
+          }
+       ]
+    }
+]
+}
