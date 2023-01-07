@@ -1,11 +1,10 @@
 # Intune Custom Compliance
-Here you will find some of the useful custom compliance items I am using
+Here you will find some of the useful custom compliance items I am using<br>
 
-## Get-BIOSUPdate Status
-<a href="https://github.com/neckermann/ModernDeviceManagement/blob/main/Custom%20Compliance/Get-BIOSUpateStatus.ps1" target="_blank">Get-BIOSUpdateStatus.ps1</a>
-<a href="https://github.com/neckermann/ModernDeviceManagement/blob/main/Custom%20Compliance/Get-BIOSUpateStatus.json" target="_blank">Get-BIOSUpdateStatus.json</a>
-
-Learn about Intune Custom Compliance: https://learn.microsoft.com/en-us/mem/intune/protect/compliance-use-custom-settings
-These 2 files make up the custom compliance script and json to allow you to mark devices non compliant in Intune if they are not on an approved bios version. You should update the model and version info in the Get-BiosUpdateStatus function to account for your models and versions. You can also update the json with a custom url to link to a KB arcticle on how they can update their BIOS if out of compliance. Such as contact the service desk to find out why the device isn't updating according to policy.
+## Get-BIOSUpdate Status
+<a href="https://github.com/neckermann/ModernDeviceManagement/blob/main/Custom%20Compliance/Get-BIOSUpateStatus.ps1" target="_blank">Get-BIOSUpdateStatus.ps1</a><br>
+<a href="https://github.com/neckermann/ModernDeviceManagement/blob/main/Custom%20Compliance/Get-BIOSUpateStatus.json" target="_blank">Get-BIOSUpdateStatus.json</a><br>
+Learn about Intune Custom Compliance: https://learn.microsoft.com/en-us/mem/intune/protect/compliance-use-custom-settings<br>
+These 2 files make up the custom compliance script and json to allow you to mark devices non compliant in Intune if they are not on an approved bios version. You should update the model and version info in the Get-BiosUpdateStatus function to account for your models and versions. You can also update the json with a custom url to link to a KB arcticle on how they can update their BIOS if out of compliance. Such as contact the service desk to find out why the device isn't updating according to policy.<br>
 
 
