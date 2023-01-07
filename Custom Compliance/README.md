@@ -4,9 +4,9 @@ Learn about Intune Custom Compliance: https://learn.microsoft.com/en-us/mem/intu
 
 ## Get-BIOSUpdate Status
 <p>
-<a href="https://github.com/neckermann/ModernDeviceManagement/blob/main/Custom%20Compliance/Get-BIOSUpateStatus.ps1" target="_blank">Get-BIOSUpdateStatus.ps1</a>
+<a href="https://github.com/neckermann/ModernDeviceManagement/blob/main/Custom%20Compliance/Get-BIOSUpateStatus.ps1" target="_blank" rel="noopener noreferrer">Get-BIOSUpdateStatus.ps1</a>
 <br>
-<a href="https://github.com/neckermann/ModernDeviceManagement/blob/main/Custom%20Compliance/Get-BIOSUpateStatus.json" target="_blank">Get-BIOSUpdateStatus.json</a>
+<a href="https://github.com/neckermann/ModernDeviceManagement/blob/main/Custom%20Compliance/Get-BIOSUpateStatus.json" target="_blank" rel="noopener noreferrer">Get-BIOSUpdateStatus.json</a>
 <br>
 </p>
 <p>
