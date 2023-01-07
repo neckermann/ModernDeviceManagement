@@ -30,7 +30,7 @@ function Write-Log {
         Function to write a message to a log file in a CMTrace/OneTrace format.
         You specifiy the Path to the log file.
         You specify the main Message you want written to the log.
-        You specify the Level of logging informational, warning, error.
+        You specify the Type of logging informational, warning, error.
         You specify the Component you are logging if writing from muliple sources to the same file.
         You specify the number of days to keep the file you are logging to.
     
@@ -40,7 +40,7 @@ function Write-Log {
         .PARAMETER Message
         The message you want to write to the log.
     
-        .PARAMETER Level
+        .PARAMETER Type
         The type of message to log, Informational, Warning, Error
     
         .PARAMETER Component
@@ -57,7 +57,7 @@ function Write-Log {
     
         .EXAMPLE
         Example 1
-        PS> Write-Log -Message "An error has occured in our script" -Level Error -Component OurScript.ps1 -Path C:\Windows\Temp\MyLogFile.log -LoggingCleanupDays 30
+        PS> Write-Log -Message "An error has occured in our script" -Type Error -Component OurScript.ps1 -Path C:\Windows\Temp\MyLogFile.log -LoggingCleanupDays 30
         Data written to log file. If the log file was older than 30 days file was deleted and a new one created with this content.
         <![LOG[An error has occured in our script]LOG]!><time="22:16:47.161412" date="1-6-2023" component="OurScript.ps1" context="NME-MAC-VM\nicke" type="3" thread="13" file="">
     
@@ -84,14 +84,14 @@ function Write-Log {
               [String]$Message,
               [Parameter(Mandatory=$true)]
               [ValidateSet("Informational", "Warning", "Error")]
-              [String]$Level,
+              [String]$Type,
               [parameter(Mandatory=$false)]
               [String]$Component,
               [Parameter(Mandatory=$false)]
               [ValidateRange(1,365)]
               [int]$LoggingCleanupDays
         )
-        switch ($Level) {
+        switch ($Type) {
             "Informational" { [int]$Type = 1 }
             "Warning" { [int]$Type = 2 }
             "Error" { [int]$Type = 3 }
@@ -125,7 +125,7 @@ function Write-Log {
             "file=`"`">"
     
         # Write the line to the log file
-        Add-Content -Path $Path -Value $Content
+        Add-Content -Path $Path -Value $Content -ErrorAction SilentlyContinue
     }
 
 # Get-BiosUpdateStatus Function
@@ -164,14 +164,14 @@ function Get-BiosUpdateStatus() {
                           -Path $LoggingPath `
                           -LoggingCleanupDays 30 `
                           -Component Get-BIOSUpdateStatus.ps1 `
-                          -Level Informational
+                          -Type Informational
             }else{
                 Write-Output -InputObject "NOTUPDATED"
                 Write-Log -Message "$env:COMPUTERNAME $($ComputerInfo.Model) BIOS not updated, on version $($BIOSInfo.SMBIOSBIOSVersion)" `
                           -Path $LoggingPath `
                           -LoggingCleanupDays 30 `
                           -Component Get-BIOSUpdateStatus.ps1 `
-                          -Level Warning
+                          -Type Warning
             }
         # HP EliteBook x360 830 G6 Notebook PC Info
         }elseif ($ComputerInfo.Model -like $HPx360G6){
@@ -181,14 +181,14 @@ function Get-BiosUpdateStatus() {
                 -Path $LoggingPath `
                 -LoggingCleanupDays 30 `
                 -Component Get-BIOSUpdateStatus.ps1 `
-                -Level Informational
+                -Type Informational
             }else{
                 Write-Output -InputObject "NOTUPDATED"
                 Write-Log -Message "$env:COMPUTERNAME $($ComputerInfo.Model) BIOS is not updated, on version $($BIOSInfo.SMBIOSBIOSVersion)" `
                           -Path $LoggingPath `
                           -LoggingCleanupDays 30 `
                           -Component Get-BIOSUpdateStatus.ps1 `
-                          -Level Warning
+                          -Type Warning
             }
         }elseif ($ComputerInfo.Model -like $HP840G5){
             if (($BIOSInfo.SMBIOSBIOSVersion -like "*$HP840G5VersionN*") -or ($BIOSInfo.SMBIOSBIOSVersion -like "*$HP840G5VersionN1*")){
@@ -197,14 +197,14 @@ function Get-BiosUpdateStatus() {
                 -Path $LoggingPath `
                 -LoggingCleanupDays 30 `
                 -Component Get-BIOSUpdateStatus.ps1 `
-                -Level Informational
+                -Type Informational
             }else{
                 Write-Output -InputObject "NOTUPDATED"
                 Write-Log -Message "$env:COMPUTERNAME $($ComputerInfo.Model) BIOS is not updated, on version $($BIOSInfo.SMBIOSBIOSVersion)" `
                 -Path $LoggingPath `
                 -LoggingCleanupDays 30
                 -Component Get-BIOSUpdateStatus.ps1 `
-                -Level Warning
+                -Type Warning
             }
         }
     }else{
@@ -213,7 +213,7 @@ function Get-BiosUpdateStatus() {
         -Path $LoggingPath `
         -LoggingCleanupDays 30 `
         -Component Get-BiosUpdateStatus.ps1 `
-        -Level Warning
+        -Type Warning
     }
 }
 
