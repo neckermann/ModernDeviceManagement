@@ -77,7 +77,8 @@ function Write-Log {
 
     # Check Path exists for log gathering
     if(!(Test-Path -Path $Path)){
-        New-Item $Path `
+        New-Item $Path.Substring(0, $Path.lastIndexOf('\'))`
+        -Name [System.IO.Path]::GetFileName($Path) `
         -ItemType File `
         -ErrorAction SilentlyContinue | `
         Out-Null
