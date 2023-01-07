@@ -79,6 +79,7 @@ function Write-Log {
     if(!(Test-Path -Path $Path)){
         New-Item -Path $Path `
         -ItemType File `
+        -Force `
         -ErrorAction SilentlyContinue | `
         Out-Null
     }
