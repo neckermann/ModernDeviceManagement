@@ -3,7 +3,7 @@ Here you will find some of the useful proactive remediations I am using
 
 ## User Appx Package Management
 <p>
-<a href="https://github.com/neckermann/ModernDeviceManagement/tree/main/Proactive%20Remediations\UserAppxPackageManagement-Detection.ps1" target="_blank" rel="noopener noreferrer">GUserAppxPackageManagement-Detection.ps1</a>
+<a href="https://github.com/neckermann/ModernDeviceManagement/tree/main/Proactive%20Remediations\UserAppxPackageManagement-Detection.ps1" target="_blank" rel="noopener noreferrer">UserAppxPackageManagement-Detection.ps1</a>
 <br>
 <a href="https://github.com/neckermann/ModernDeviceManagement/tree/main/Proactive%20Remediations\UserAppxPackageManagement-Remediation.ps1" target="_blank" rel="noopener noreferrer">UserAppxPackageManagement-Remediation.ps1</a>
 <br>
