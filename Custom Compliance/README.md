@@ -10,7 +10,7 @@ Learn about Intune Custom Compliance: https://learn.microsoft.com/en-us/mem/intu
 <br>
 </p>
 <p>
-These 2 files make up the custom compliance script and json to allow you to mark devices non compliant in Intune if they are not on an approved bios version. You should update the model and version info in the Get-BiosUpdateStatus function to account for your models and versions. You can also update the json with a custom url to link to a KB arcticle on how they can update their BIOS if out of compliance. Such as contact the service desk to find out why the device isn't updating according to policy.
+These 2 files make up the custom compliance script and json to allow you to mark devices non compliant in Intune if they are not on an approved bios version. You should update the model and version info in the Get-BiosUpdateStatus.ps1 to account for your models and versions. You can also update the Get-BIOSUpdateStatus.json MoreInfoUrl with a custom url to link to a KB arcticle on how they can update their BIOS if out of compliance. Such as contact the service desk to find out why the device isn't updating according to policy.
 </p>
 
 
